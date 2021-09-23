@@ -18,7 +18,7 @@ use App\Http\Controllers\ApiController;
 //     return view('welcome');
 // });
 
-Route::get('/', [ApiController::class, 'index']);
-//Route::get('/', [ApiController::class, 'json']);
+Route::get('/', [ApiController::class, 'index'])->name('/');
+Route::get('/json', [ApiController::class, 'json'])->name('json');
 Route::get('/apiNasa', [ApiController::class, 'consumirApi'])->name('apiNasa');
-//Route::get('/apiJson', [ApiController::class, 'consumirJson'])->name('apiJson');
+Route::get('/apiJson', [ApiController::class, 'consultarJson'])->name('apiJson');
